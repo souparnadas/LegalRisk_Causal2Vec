@@ -45,6 +45,18 @@ Trained on the **LEDGAR (LexGLUE)** benchmark dataset, targeting a 3-class risk 
 ## 🚀 Quick Start (Inference)
 
 To run the live inference demo locally or in Colab:
-**Install Requirements:**
+1. **Install Requirements:**
    ```bash
    pip install -r requirements.txt
+   ```
+
+2. **Download the Weights:** Download `LegalAI_Brain_Epoch_3.pt` from the **Releases** tab of this repository and place it in your working directory. *(Note: The 14.5GB Mistral base model will download automatically via Hugging Face upon execution).*
+
+3. **Run the Notebook:**
+   Open `2_Live_Inference.ipynb`, instantiate the model, and pass any raw contract clause to the evaluator.
+
+   ```python
+   # Example Output
+   Tested Clause: "The contractor shall indemnify and hold harmless the client against all liabilities, damages, and legal claims arising from contract breach."
+   Auditor Decision: High (Legal/Liability)
+   ```
